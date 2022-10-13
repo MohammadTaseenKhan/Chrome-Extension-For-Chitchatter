@@ -1,0 +1,74 @@
+html, body, .container, .content {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+._s15 {display: none !important}
+
+#messenger, webview {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#toolbar {
+  left: 0;
+  border: 0;
+  margin: 0;
+  top: 50px;
+  padding: 0;
+  width: 30px;
+  height: 50px;
+  z-index: 999999999;
+  position: absolute;
+  table-layout: fixed;
+  border-spacing: 0 1px;
+  vertical-align: middle;
+  background-color: rgba(0,0,0,0.2);
+}
+
+#toolbar tr td {
+  border: 0;
+  margin: 0;
+  width: 100%;
+  height: 50px;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.3s ease all;
+  background-repeat: no-repeat;
+  -moz-transition: 0.3s ease all;
+  background-size: 16px !important;
+  -webkit-transition: 0.3s ease all;
+  background-color: rgba(0,0,0,0.5);
+  background-position: center center;
+}
+
+#toolbar tr td:hover {background-color: rgba(0,0,0,0.7)}
+
+#toolbar[show=false] {
+  opacity: 0;
+  transition: opacity 1000ms ease-in-out;
+  -moz-transition: opacity 1000ms ease-in-out;
+  -webkit-transition: opacity 1000ms ease-in-out;
+}
+
+#reload {background: url("../icons/reload.png") no-repeat center center}
+#popout {background: url("../icons/popout.png") no-repeat center center}
+#support {background: url("../icons/support.png") no-repeat center center}
+#makedark {background: url("../icons/makedark.png") no-repeat center center}
+
+body[dark=true] {
+  filter: invert(100%) !important;
+  -webkit-filter: invert(100%) !important;
+}
+
+body[dark=true] img, body[dark=true] svg {
+  filter: invert(100%) !important;
+  -webkit-filter: invert(100%) !important;
+}

@@ -1,0 +1,54 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "version": "0.1.5",
+  "manifest_version": 2,
+  "name": "App for Chitchatter",
+  "short_name": "Chitchatter-web",
+  "web_accessible_resources": [
+    "data/panel/icons/*"
+  ],
+  "permissions": [
+    "storage",
+    "*://*.Chitchatter.im/*"
+  ],
+  "background": {
+    "page": "lib/chrome/background.html"
+  },
+  "description": "An easy-to-use and lite app for Chitchatter",
+  "homepage_url": "https://github.com/jeremyckahn/chitchatter.git",
+  "options_ui": {
+    "chrome_style": true,
+    "page": "data/options/options.html"
+  },
+  "browser_action": {
+    "default_title": "App for Chitchatter",
+    "default_icon": {
+      "16": "data/icons/wp.png",
+      "32": "data/icons/wp.png",
+      "48": "data/icons/wp.png",
+      "64": "data/icons/wp.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "all_frames": false,
+      "run_at": "document_start",
+      "js": [
+        "data/panel/index.js"
+      ],
+      "css": [
+        "data/panel/index.css"
+      ],
+      "matches": [
+        "*://*.Chitchatter.im/*"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "data/icons/wp.png",
+    "32": "data/icons/wp.png",
+    "48": "data/icons/wp.png",
+    "64": "data/icons/wp.png",
+    "128": "data/icons/wp.png"
+  }
+}
